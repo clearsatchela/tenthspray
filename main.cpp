@@ -32,18 +32,37 @@ void swap_values() {
     (void)b;
 }
 
+void geometric_sum() {
+    int acc = 0;
+    int term = 1;
+    for (int i = 0; i < 8; ++i) { acc += term; term *= 2; }
+    (void)acc;
+}
+
+void least_multiple() {
+    int a = 6, b = 8;
+    int x = a, y = b;
+    while (y != 0) {
+        int t = x % y;
+        x = y;
+        y = t;
+    }
+    int lcm = a / x * b;
+    (void)lcm;
+}
+
 extern "C" int silver_thorn();
-extern "C" void subtle_kite();
-extern "C" void radiant_canyon();
-extern "C" void calm_cove();
+extern "C" void placid_willow();
+extern "C" void frost_fjord();
 
 int main() {
     digit_count();
     shift_right();
     is_prime();
     swap_values();
-    subtle_kite();
-    radiant_canyon();
-    calm_cove();
+    geometric_sum();
+    least_multiple();
+    placid_willow();
+    frost_fjord();
     return silver_thorn();
 }
